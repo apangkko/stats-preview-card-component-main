@@ -92,17 +92,12 @@ img, picture {
     position: relative;
     display: flex;
     justify-content: center;
+    background-color: var(--cl-softViolet);
 }
 
-.statImg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    background: hsla(277, 100%, 35%, .5);
+.statImg > img {
+    mix-blend-mode: multiply;
+    opacity: 75%;
 }
 
 @media (min-width: 60rem) {
