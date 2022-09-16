@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+/* colors */
+--cl-veryDarkBlue: hsl(233, 47%, 7%);
+--cl-darkBlue: hsl(244, 38%, 16%);
+--cl-softViolet: hsl(277, 64%, 61%);
+--cl-white: hsl(0, 0%, 100%);
+--cl-white75: hsla(0, 0%, 100%, 0.75);
+--cl-white60: hsla(0, 0%, 100%, 0.6);
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1 {
+    margin: 0;
+}
+
+body {
+    font-size: 0.938rem;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400;
+}
+
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cl-veryDarkBlue);
+    color: var(--cl-white75);
+}
+
+.container {
+    margin: 1rem;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--cl-darkBlue);
+}
+
+.statInfo {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.statInfo > h1 {
+    color: var(--cl-white);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.statInfo > h1 > span {
+    color: var(--cl-softViolet);
+}
+
+.statInfo > p {
+    line-height: 1.75;
+}
+
+.statDetail {
+    margin-top: 2rem;
+}
+
+.statNum {
+    color: var(--cl-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    display: inline-block;
+}
+
+.statHeading {
+    color: var(--cl-white60);
+    font-size: 0.72rem;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+.statImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.statImg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: hsla(277, 100%, 35%, .5);
+}
+
+@media (min-width: 60rem) {
+    .container {
+        max-width: 1440px;
+        flex-direction: row;
+    }
+
+    .statInfoSection {
+        width: 55%;
+        padding: 4rem;
+    }
+
+    .statInfo {
+        max-width: 380px;
+        text-align: left;
+        padding: 0;
+    }
+
+    .statInfo > h1 {
+        font-size: 2.2rem;
+    }
+
+    .stats {
+        display: flex;
+        gap: 50px;
+    }
+}
