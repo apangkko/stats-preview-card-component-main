@@ -41,7 +41,7 @@ img, picture {
 
 .container {
     margin: 1rem;
-    max-width: 375px;
+    //max-width: 375px;
     display: flex;
     flex-direction: column-reverse;
     border-radius: 8px;
@@ -98,6 +98,8 @@ img, picture {
 .statImg > img {
     mix-blend-mode: multiply;
     opacity: 75%;
+    object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 60rem) {
